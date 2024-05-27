@@ -1,0 +1,19 @@
+﻿@model JokesWebApp.Models.ConsumeJokeAPI
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Random Joke </h1>
+    <p></p>
+    <p style="font-size: 24px; margin-top: 20vh">@Html.DisplayFor(model => model.Setup)</p>
+    <p>
+        @Html.DisplayFor(Model => Model.Delivery)
+    </p>
+
+    <form asp-controller="Home" asp-action="Index">
+        <input type="submit" method="get" value="Another Joke!"/>
+        
+    </form>
+</div>
